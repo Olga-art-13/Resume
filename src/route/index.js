@@ -15,18 +15,283 @@ router.get('/', function (req, res) {
   res.render('index', {})
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 // ================================================================
 
-//              ↙ тут вводимо шлях (PATH) до сторінки
+var header= {
+
+  name: {
+    firstname: 'Dmytro',
+    lastname:  'Ivanov',
+  },
+
+  position: 'Junior Fullstack JS Developer',
+
+  salary: '600$ в місяц',
+
+  address:'25813. Husum. Schobuller Weg 11. Nord-Friesland. Deutschland',   
+
+};
+
+var footer= { 
+  social: {
+    email: {
+      text : 'ivanov@mail.com',
+      href: 'malito:ivanov@mail.com'
+    },
+    phone: {
+      text: '+380670000123',
+      href: 'tel:+380670000123',
+    },
+    linkedin: {
+      text:'LinkedIn',
+      href: 'https://www.linkedin.com/in/dmytro-test',
+    }, 
+  },
+};  
+// ================================================================
+
+
 router.get('/summary', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
+              
   res.render('summary', {
-    // ↙ сюди вводимо JSON дані
+
+    page: {
+      title: 'Resume / Summary',
+    },
+
+    header,
+
+    main: {
+      summary:  {
+        title: 'Summary',
+        text:  `Open-minded for new technologies, 
+                with 1 years of experience in development.
+                Whenever I start to work on a new project 
+                I learn the domain and try to understand 
+                the idea of the project. Good team player, 
+                every colleague is a friend to me.`,
+  
+      },
+
+      experience:  {
+        title: 'Other experience',
+        text:  `Pet project for parsing sport betting data 
+                from different platforms ( odds ) and sport 
+                statistics (tournament position, goals etc), 
+                analyzing by simple mathematics models 
+                and preparing probability for such events like:
+                money line - first win / draw / second win, 
+                totals etc.`
+      },
+    },
+   
+    footer,  
+
   })
 })
 
+router.get('/skills', function (req, res) {
+              
+  res.render('skills', {
+    
+    page: {
+      title: 'Resume / Skills',
+    },
+    header,    
+
+    main: {
+      skills: [
+        {
+          name:'HTML',
+          point: 10,
+          isTop: true,
+        },
+        {
+          name:'Handlbars',
+          point: 9,
+        },
+        {
+          name:'VS Code',
+          point: 8,
+          isTop: false,
+        },
+        {
+          name:'Git',
+          point: 9.9,
+          isTop: true,
+        },
+        {
+          name:'Terminal',
+          point: 9.1,
+        },
+        {
+          name:'MPM',
+          point: 7,
+          isTop: false,
+        
+        },
+        {
+          name:'React.js',
+          point: 0,
+        },
+        {
+          name:'PHP',
+          point: null,
+        },  
+      ],
+
+      hobbies: [
+        {
+          name:'Dance',
+          isMain:true,
+        },
+        {
+          name:'Swimming',
+          isMain:false,
+        },
+        {
+          name:'Sing',
+          isMain:true,
+        },
+      ],
+    },
+    
+    
+      footer,
+  })
+})
+
+
 // ================================================================
+
+router.get('/education', function (req, res) {
+ 
+  res.render('education', {
+
+    page: {
+      title: 'Resume / Education',
+    },
+
+    header,
+
+    main: {
+      educations: [
+        {
+          name:'Academy',
+          isEnd: true,
+        },
+        {
+          name:'Go-IT',
+          isEnd: false,
+        },
+        {
+          name:'Volkshochschulle Husum',
+          isEnd: true,
+        }, 
+        {
+          name:'IT Brains',
+          isEnd: false,
+        },  
+      ],
+      
+      certificates:[
+        {
+          name:'Bachelor`s',
+          id: 123,
+        },
+        {
+          name:'Master',
+          id: 456,
+        },
+        {
+          name:'Doctor',
+          id: 789,
+        },  
+      ],
+    },
+
+    footer,
+  }) 
+})
+
+
+router.get('/work', function (req, res) {
+ 
+  res.render('work', {
+
+    layout: 'big',
+
+    page: {
+      title: 'Resume /Work',
+    },
+
+    main: {
+      works: [
+        {
+          position:'Junior Fullstack Developer',
+          company: {
+            name:'IT Brains ',
+            url:'https://it-brains.com.ua/',
+           },
+         duration:{
+          from:'01.02.2022',
+          to: null,
+         },
+         pojectAmount:'3',
+         projects: [
+          {
+            name:'Resume',
+            url: 'https://resume.com.ua/',
+            about:
+            'High-load application for searching apartments.',
+            stackAmount:'3',
+            stacks: [
+              {
+                name:'React.js',
+              },
+              {
+                name:'HTML/CSS',
+              },
+              {
+                name:'Node.js',
+              },
+            ],
+            awardAmount:'2',
+            awards: [
+              {
+                name: 'Background verification',
+              },
+              {
+                name: 'Preparing SEO optimiyed pages.',
+              },
+            ],
+          },  
+
+         ],
+
+        },
+        { 
+          position:'Tester',
+          company: {
+            name:'Ewolution',
+            url: null,
+           },
+         duration:{
+          from:'01.01.2019',
+          to: '01.01.2020',
+         },
+         
+        },
+        
+      ],
+    },
+    
+      
+
+    footer,
+
+  }) 
+})
 
 // Підключаємо роутер до бек-енду
 module.exports = router
