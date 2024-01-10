@@ -3,8 +3,14 @@
     <main>
         <section>
             {{>title data='My education' big=true }}            
-           <em>({{gender}})</em>
-
+            <ul>
+                {{#each educations }}
+                    <li>
+                        {{name}}
+                        {{#unless isEnd }} (in progress) {{/unless}}
+                    </li>
+                {{/each}}
+            </ul>
         <section>
             {{>title data='My certificates' big=false }}
             <ul>
