@@ -45,7 +45,7 @@
                     <br>
                     {{>date}}
                 <hr/>
-                   {{responsibilities}}
+                   <p>{{responsibilities}}</p>
                 <hr/>
                 <div>
                     
@@ -62,15 +62,15 @@
                     <ul>
                         <li><strong>Project:</strong></li>
                         {{#each projects}}
-                            <b><i>Name:</i></b> {{name}}
+                            <b>{{name}}</b>
                             <br>
-                            <b><i>Description:</i></b> {{description}}
+                            <b><em>Description:</em></b> {{description}}
                             <br>
-                            <b><i>Status:</i></b> {{status}}
+                            <b><em>Status:</em></b> {{status}}
                             <br><br>
                             <b>Team:</b>
                             {{#each teams}}
-                                <b><i>Name:</i></b> {{team_name}}
+                                {{team_name}}
                                 <br><br>
                                 <em>TeamLeader:</em>
                                 <br>
@@ -89,17 +89,17 @@
                                     <br> 
                                     <em>Title:</em> {{title}},
                                     <br> 
-                                    <em>Email:</em> {{email}}.
+                                    <em>Email:</em> {{email}}
                                     <hr/>
                                     <li><b>Skills:</b></li> {{skills}}
                                     <br><br>
                                     <li><strong>Project:</strong></li> 
                                     {{#each projects}}                
-                                    <b><i>Name:</i></b> {{name}}
+                                    <b>{{name}}</b> 
                                     <br>
-                                    <b><i>Description:</i></b> {{description}}
+                                    <b><em>Description:</em></b> {{description}}
                                     <br>
-                                    <b><i>Technologies:</i></b> {{technologies}}
+                                    <b><em>Technologies:</em></b> {{technologies}}
                                     <br><br>
                                     <em>TeamMembers:</em> 
                                         {{#each team_members}}
