@@ -44,7 +44,7 @@
      <ul>
         {{#each awards }}
             <li><b>{{title}}</b> ({{year}})</li>
-            {{description}}.
+            <p>{{description}}</p>
             <br><br>
         {{/each}}
      </ul>
@@ -84,12 +84,10 @@
 </div>
 
 <div>
-    {{>title data='Contributions:' big=false }}
-     <ul>
-        {{#with contributions }}
-            <b>{{title}}.</b> ({{year}}).<br>
-            {{description}} ({{contributions}}.)
-            <br><br>
-        {{/with}}
-     </ul>
+    {{#with contributions }}
+        <b>{{title}}.</b><br> 
+        ({{year}}).<br>
+        <p>{{description}}</p>
+        ({{contributions}}.)
+    {{/with}}
 </div>
