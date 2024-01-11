@@ -1,3 +1,95 @@
 <div>
-    In progress
+    <h2>{{name}}: {{occupation}}</h2> 
+    <section>
+        <hr/>
+        <em>Birthdate:</em>  {{birthdate}}.     <em>Birthplace:</em>  {{birthplace}}.<br>
+        <em>Deathdate:</em> {{deathdate}}.      <em>Deathplace:</em>  {{deathplace}}.
+        <hr/>
+    </section>
+</div>
+<div>
+    <b>Nationality:</b> {{nationality}}.<br><br>
+    <b>Partners:</b>
+    <ul>
+        {{#each partners }}
+            <li> {{name}} ({{years}})</li>
+            <em>Relationship:</em> {{relationship}}.
+            <br><br>
+        {{/each}}
+     </ul>
+    <hr/>
+</div>
+<div>
+    
+    {{>title data='Major discoveries:' big=false }}
+     <ul>
+        {{#each major_discoveries }}
+            <li><b>{{title}}</b> ({{year}})</li>
+            {{description}}.
+            <br><br>
+        {{/each}}
+     </ul>
+
+    {{>title data='Definitions:' big=false }}                    
+    {{>know}} 
+
+    {{>title data='Quotes:' big=false}}      
+    {{>quotes}}
+    
+    <hr/>                              
+</div>
+
+<div>
+    {{>title data='Awards:' big=false }}
+     <ul>
+        {{#each awards }}
+            <li><b>{{title}}</b> ({{year}})</li>
+            {{description}}.
+            <br><br>
+        {{/each}}
+     </ul>
+<hr/>
+</div>
+
+<div>
+    {{>title data='Educations:' big=false }}
+        <ul>
+            {{#each education}}
+                <li><em>Degree:</em> {{degree}}</li>
+                <li><em>Field:</em>  {{field}}</li>
+                <li><em>University:</em> {{institution}}  ({{year}}). </li>
+            {{/each}}
+        </ul>
+<hr/>
+</div> 
+
+<div>
+    {{>title data='Publications:' big=false }}
+     <ol>
+        {{#each notable_publications }}
+            <li><em>Title:</em> {{title}} ({{year}})</li>
+            <em>Publisher:</em> {{publisher}}.
+            <br><br>
+        {{/each}}
+     </ol>
+<hr/>
+</div>
+
+<div>
+    {{>title data='Influences:' big=false }}
+    {{>influences}}
+    {{>title data='Influenced:' big=false }}
+    {{>influenced}}
+    <hr/>   
+</div>
+
+<div>
+    {{>title data='Contributions:' big=false }}
+     <ul>
+        {{#with contributions }}
+            <b>{{title}}.</b> ({{year}}).<br>
+            {{description}} ({{contributions}}.)
+            <br><br>
+        {{/with}}
+     </ul>
 </div>
