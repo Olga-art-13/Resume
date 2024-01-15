@@ -1,0 +1,74 @@
+<div>
+    {{#with web}}
+        <section>
+            <h1>{{>title data="Programming languages" big=true}}</h1>
+        </section>
+        <div>
+            <ol>
+                {{#each languages}}
+                <div>
+                  <li>
+                     <h2><dfn>{{name}}</dfn></h2>  <p>Version: <abbr>{{version}}</abbr></p>
+                  </li>                
+                  <p>{{description}}</p>
+
+                   {{#each elements}}
+                    <p><h3>Element:</h3></p>
+                    <ul>
+                      <li>
+                         <strong>{{name}}</strong><p>{{description}}</p>
+                         <hr/>
+                          <p><h4>Attributes:</h4></p>
+                         {{#each attributes}}
+                          <ul>
+                             <li>
+                                 <hr/><strong>{{name}}</strong>: {{description}}<hr/>
+                             </li>
+                           </ul>
+                         {{/each}}
+                      </li>
+                    </ul>
+                    {{/each}}
+
+                    {{#each properties}}
+                    <p><h3>Propertie:</h3></p>
+                    <ul>
+                      <li>
+                         <strong>{{name}}</strong><p>{{description}}</p>
+                         <hr/>
+                          <p><h4>Values:</h4></p>
+                         {{#each values}}
+                          <ul>
+                             <li>
+                                 <hr/><strong>{{value}}</strong>: {{description}}<hr/>
+                             </li>
+                           </ul>
+                         {{/each}}
+                      </li>
+                    </ul>
+                    {{/each}}
+
+                    {{#each functions}}
+                    <p><h3>Function:</h3></p>
+                    <ul>
+                      <li>
+                         <strong>{{name}}</strong><p>{{description}}</p>
+                         <hr/>
+                          <p><h4>Parameter:</h4></p>
+                         {{#each parameters}}
+                          <ul>
+                             <li>
+                                 <hr/><strong>{{name}} <em>(type):</em> {{type}}</strong>: {{description}}<hr/>
+                             </li>
+                           </ul>
+                         {{/each}}
+                      </li>
+                    </ul>
+                    {{/each}}
+                   <br><hr/>
+                </div>
+                {{/each}}   
+            </ol>
+        </div>
+    {{/with}}      
+</div>
