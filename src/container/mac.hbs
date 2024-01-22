@@ -1,3 +1,108 @@
 <section>
-    TEST MAC
+    <div class="card w-text center p-3 mb-2 bg-secondary-subtle text-emphasis-secondary" style="width: 50rem;">
+        <img src="https://www.istockphoto.com/en/photo/hcmc-vietnam-macbook-pro-14-inches-m2-gm1478610581-506834041?phrase=apple+macbook+pro" class="card-img-top" alt="apple macbook pro">
+        <div class="card-header">
+          <h3 class="card-title text-info bg-dark opacity-75"> {{name}}. ${{price}} </h3> 
+          <p class="text-uppercase fs-4">{{description}}</p>
+          <p class="text-lowercase fs-6">Category ({{category}})</p>
+        </div>
+        <div class="card-body">
+         <p class="card-text text-end">
+            <h5>Features:</h5>
+            {{#with features}}
+                <ul>
+                    <li><h6><u>OP</u></h6>{{operating_system}}</li>
+
+                    <li><h6><u>Processor</u></h6></li>
+                    {{#with processor}}
+                    <ul>
+                        <li>brand: <u>{{brand}}</u></li>
+                        <li>model: <u>{{model}}</u></li>
+                        <li>speed: <u>{{speed}}</u></li>
+                        <li>cores: <u>{{cores}}</u></li>
+                        <li>cache: <u>{{cache}}</u></li>
+                    </ul>
+                    {{/with}}
+                    <hr/>
+                    <li><h6><u>Memory</u></h6></li>
+                    {{#with memory}}
+                    <ul>
+                      <li>type: <u>{{type}}</u></li>
+                      <li>size: <u>{{size}}</u></li>
+                      <li>speed: <u>{{speed}}</u></li>  
+                    </ul>
+                    {{/with}}
+                    <hr/>
+                    <li><h6><u>Storage</u></h6></li>
+                    {{#with storage }}
+                    <ul>
+                      <li>type: <u>{{type}}</u></li>
+                      <li>size: <u>{{size}}</u></li>
+                    </ul>
+                    {{/with}}
+                    <hr/>
+                    <li><h6><u>Display</u></h6></li>
+                    {{#with display}}
+                     <ul>
+                        <li>size: <u>{{size}}</u></li>
+                        <li>resolution: <u>{{resolution}}</u></li>
+                        <li>technology: <u>{{technology}}</u></li>
+                        <li>color_space: <u>{{color_space}}</u></li>
+                        <li>brightness: <u>{{brightness}}</u></li>
+                        <li>refresh_rate: <u>{{refresh_rate}}</u></li>
+                     </ul>
+                    {{/with}}
+                    <hr/>
+                    <li><h6><u>Graphics</u></h6></li>
+                    {{#with graphics}}
+                     <ul>
+                         <li>brand: <u>{{brand}}</u></li>
+                         <li>model: <u>{{model}}</u></li>
+                         <li>memory: <u>{{memory}}</u></li>       
+                     </ul>
+                    {{/with}}
+                    <hr/>
+                    <li><h6><u>Ports</u></h6></li>
+                    {{#each ports}}
+                        <ul><li><u>{{type}}. count: ({{count}})</u></li></ul> 
+                        <ul>{{features}}</ul><br>
+                    {{/each}}
+                    <hr/>
+                    <li><h6><u>Battery</u></h6></li>
+                    {{#with battery}}
+                     <ul>
+                         <li>type: <u>{{type}}</u></li>
+                         <li>capacity: <u>{{capacity}}</u></li>
+                         <li>life: <u>{{life}}</u></li>       
+                     </ul>
+                    {{/with}}
+                    <hr/>
+                    <li><h6><u>External parameters</u></h6></li>
+                        <ul><li>weight <u>{{weight}}</u></li></ul>
+                    {{#with dimensions}}
+                     <ul>
+                         <li>height: <u>{{height}}</u></li>
+                         <li>width: <u>{{width}}</u></li>
+                         <li>depth: <u>{{depth}}</u></li>       
+                     </ul>
+                    {{/with}}
+                    <hr/>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><h6><u> By accessories:</u></h6></li>
+                            {{#each accessories}}
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">{{name}}. (${{price}})</a>
+                                    </li>
+                                </ul>
+                            {{/each}}
+                        </ol>
+                    </nav>                   
+                </ul>
+            {{/with}} 
+         </p>
+        </div>
+    </div>
 </section>
