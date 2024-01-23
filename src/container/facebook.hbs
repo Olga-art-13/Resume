@@ -1,3 +1,60 @@
 <section>
-    FACEBOOK
+  <h1><span class="badge bg-primary">{{name}}</span></h1>  
+</section>
+<section>
+    <div class="card-group">
+  <div class="card border-primary mb-3" style="max-width: 100rem;">
+    <div class="card-body">
+      <p class="card-text">
+            {{#each users}}
+                <ul>
+                    <hr class="card border-primary mb-3"/>
+                    <h5 class="card-title text-dark">
+                        <li> User id ({{id}})</li> 
+                         <strong>{{name}}. g.{{gender}}. age {{age}}</strong>
+                    </h5>
+                    <hr class="card border-primary mb-3"/>
+                     <div class="card-footer">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                     {{#each friends}}
+                         <div class="card-group">
+                            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                                <div class="card-body">
+                                   <p class="card-text">
+                                    <h6 class="card-title text-dark">
+                                        <li>Friend id ({{id}})</li> 
+                                        <strong> {{name}}. g.{{gender}}. age {{age}}</strong>
+                                    </h6>
+                                     <hr class="card border-primary mb-3"/>
+                                   </p>
+                                   <p>
+                                    <u>Mutual friends</u>
+                                    {{#each mutual_friends}}
+                                        <ul>
+                                            <li>Friend id ({{id}})</li>
+                                            <h6>{{name}}. g.{{gender}}. age {{age}}</h6>
+                                             <hr class="card border-primary mb-3"/>
+                                             {{#each mutual_friends}}
+                                               <ul>
+                                                    <u>Mutual friends</u>
+                                                    <li>Friend id ({{id}})</li>
+                                                    <h6>{{name}}. g.{{gender}}. age {{age}}</h6>
+                                               </ul>
+                                             {{/each}}
+                                            <hr class="card border-primary mb-3"/>
+                                        </ul>
+                                    {{/each}}
+                                   </p>
+                                   {{>groups}}                                   
+                                </div>
+                            </div>
+                         </div>
+                    {{/each}}
+                    {{>groups}}                                     
+                </ul>
+            {{/each}} 
+      </p>
+    </div>   
+  </div>
 </section>
