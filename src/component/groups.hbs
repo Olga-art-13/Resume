@@ -1,0 +1,29 @@
+<p>
+    {{#each groups}}
+        <div class="card-group">
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-body">
+                    <p class="card-text">
+                        <h6 class="card-title text-dark">
+                            <li>Group id ({{id}})</li>
+                                <h6>{{name}}.</h6>
+                                    <hr class="card border-primary mb-3"/> 
+                                        <p>{{description}}.</p>
+                                        <hr class="card border-primary mb-3"/>  
+                        </h6>  
+                    </p>
+                <p>
+                    <u>Members</u>
+                    {{#each members}}
+                        <ul>
+                            <li>member id ({{id}})</li>
+                            <h6>{{name}}. g.{{gender}}. age {{age}}</h6>
+                            <hr class="card border-primary mb-3"/>
+                        </ul>                    
+                    {{/each}}
+                </p>
+            </div>
+        </div>
+      </div>
+    {{/each}}
+</p>

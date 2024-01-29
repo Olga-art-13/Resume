@@ -1,0 +1,128 @@
+<div class="container w-auto p-3 ">
+    <p class="text-center h1">{{name}} </p>
+    <br>
+    <p class="text-xxl-end fst-normal text-center"><u>{{description}}</u></p>
+    <br>
+    <hr/>
+</div>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            History<code>JS</code>
+        </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                {{#with history}}
+                <ul>
+                    <li>Year_founded: {{year}}</li>
+                    <li>Founder: {{founder}}</li>
+                </ul>
+                {{/with}}    
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Syntax<code>JS</code>
+            </button>
+            </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                {{#with syntax}}
+                    <ul>
+                         <li>{{variables}}</li><br>
+                         <li>{{functions}}</li><br>
+                         <li>{{conditionals}}</li><br>
+                         <li>{{loops}}</li><br>
+                         <li>{{classes}}</li><br>
+                    </ul>
+                {{/with}}    
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Features<code>JS</code>
+        </button>
+        </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <ul>
+                    <li>{{features}}</li>
+                </ul>     
+            </div>
+        </div>
+    </div>
+</div>
+
+  <div class="container w-auto p-3  dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Types
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="link-underline-primary" href="#">{{types}}</a></li>  
+        </ul>
+        <br><br>
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Libraries
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="link-underline-primary" href="#"> {{libraries}}</a></li>
+        </ul>
+        <br><br>
+         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tools
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="link-underline-primary" href="#"> {{tools}}</a></li>
+        </ul>
+        <hr/>
+   </div>
+    <br>
+    <div class="container w-auto p-3">
+        <h6 class="text h6"><u>Community:</u></h6>
+        {{#each community}}
+        <ul class="nav">
+            <li class="nav-item">
+                {{type}}: <a class="nav-link" href="#"><u>{{name}}</u></a>
+            </li>
+        </ul>
+        {{/each}}
+    <hr/>
+    </div>
+    <div>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+            </ol>
+        </nav>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
