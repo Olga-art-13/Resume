@@ -1,0 +1,120 @@
+<section>
+    <div class="card">
+        <div class="card-body">
+             {{#with heading}}
+               <main>
+                    {{#with main}}
+                        <h1 class="card-title">{{title}}</h1>
+                        <p class="card-text">{{text}}</p>
+                        {{#with button_text}}
+                            <button type="button" class="btn btn-primary btn-sm">{{solid}}</button>
+                            <br>
+                            <br>
+                            <button type="button" class="btn btn-outline-primary btn-lg">{{outline}}</button>
+                        {{/with}}                        
+                    {{/with}}
+               </main>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            {{#with second}}
+                <h2 class="card-title">{{title}}</h2>
+                <p class="text-start">{{text}}</p>
+                    {{#with button_text}}
+                        <button type="button" class="btn btn-secondary">{{solid}}</button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-outline-secondary">{{outline}}</button>
+                    {{/with}}        
+            {{/with}}
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            {{#with subblock}}
+                <h3 class="card-title">{{title}}</h3>
+                <p class="text-start">{{text}}</p>
+                    {{#with button_text}}
+                        <button type="button" class="btn btn-dark btn-sm">{{solid}}</button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-outline-dark btn-sm">{{outline}}</button>
+                    {{/with}}        
+            {{/with}}
+        </div>
+    </div>
+    {{/with}}    
+</section>
+<section>
+    <div class="card">
+        <div class="card-body">
+            {{#with nested_display}}
+                <h1 class="card-title">{{title}}</h1>
+                <div class="card w-75">
+                    <div class="card-body">
+                        {{#with children_display}}
+                            <h4 class="card-title">{{title}}</h4>
+                            <p class="text-start">{{text}}</p>
+                            <button type="button" class="btn btn-outline-warning">
+                                {{#with button}}
+                                    <p>{{text}}</p>
+                                {{/with}}
+                            </button> 
+                        {{/with}}
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h6 class="card-title">{{header_text}}</h6>
+                    {{#with button}}
+                         <button type="button" class="btn btn-info btn-sm">{{text}}</button>
+                    {{/with}}
+                </div>
+            {{/with}}
+        </div>
+    </div>
+</section>
+<section>
+    <div class="card">
+        <div class="card-body">
+        {{#with paragraph}}
+            <p class="text-uppercase">{{title}}</p>
+            <p class="text-lowercase">{{text}}</p>
+            {{#with button}}
+                <div class="btn-group dropend" role="group">
+                    <button type="button" class="btn btn-link" data-bs-toggle="dropdown" aria-expanded="false" >
+                        {{text}}
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">{{url}}</a></li>
+                    </ul>
+                </div>
+            {{/with}}
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    {{#each list_name}}
+                        <ul>
+                            <div class="btn-group dropend" role="group">
+                                <li>
+                                    <button type="button" class="btn btn-link" data-bs-toggle="dropdown" aria-expanded="false" >
+                                        {{text}}
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">{{url}}</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ul>
+                    {{/each}}
+                </div>
+            </div>
+        {{/with}}
+        </div>
+    </div>
+</section>
+
+
