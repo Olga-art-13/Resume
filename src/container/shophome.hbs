@@ -1,0 +1,131 @@
+<section class="mb-5">
+     {{#with navigation}}
+      <ul class="nav">
+          {{#each links}}
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">{{text}}</a>      
+            </li>
+          {{/each}}
+      </ul>
+     {{/with}}
+</section>
+<hr/>
+<section>
+    {{#with newsBlock}}
+        <h2 class="title text-center">{{title}}</h2>
+         <div class=" container row row-cols-6 row-cols-md-4 g-2">
+                {{#each cards}}
+                      <div class="col">
+                        <div class="card text-bg-dark m-3">
+                            <div class="card-header">
+                                 <h6 class="card-title">{{title}}</h6>
+                                 <span class="badge rounded-pill text-bg-success">
+                                    {{#if cards isNew=true}} 
+                                       {{isNew}}
+                                       {{else}}
+                                    {{/if}}                        
+                                </span>
+                                <span class="badge rounded-pill text-bg-danger">
+                                    {{#if cards isTop=true}} 
+                                       {{isTop}}
+                                       {{else}}
+                                    {{/if}}                        
+                                </span>         
+                            </div>
+                            <div class="card-body">
+                                 <p class="card-text">{{description}}</p>
+                            </div>
+                        </div>
+                      </div>
+                {{/each}}
+         </div> 
+    {{/with}}
+</section>
+<section class="mb-3">
+     {{#with goodsBlock}}
+      <ul class="nav px-1">
+          {{#each tabs}}
+            <li class="nav-item nav-tabs px-1">
+                <a class="nav-link active" aria-current="page" href="#" >{{text}}</a>                    
+            </li>
+          {{/each}}
+      </ul>
+     {{/with}}
+</section>
+ <div>  
+    {{#with goodsBlock}}          
+            <div class=" container row row-cols-4 row-cols-md-2 g-4">
+             {{#each cards}}
+                    <div class="col">
+                        <div class="card ">     
+                            <img src="{{image}}" class="card-img-top" alt="{{alt}}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{title}}</h5>
+                                <p class="card-text">{{description}}</p>
+                                <span class="badge rounded-pill text-bg-warning">
+                                    {{#if cards isHot=true}}
+                                      ({{isHot}})
+                                      {{else}}
+                                    {{/if}}
+                                </span>
+                                <span class="badge rounded-pill text-bg-prymary">
+                                    {{#if cards isNew=true}}
+                                      {{isNew}}
+                                      {{else}}
+                                    {{/if}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+             {{/each}}
+            </div>
+        {{/with}}
+    <hr/>
+</div>
+<section>
+    {{#with subscribe}}
+        <div class="alert alert-dark" role="alert">
+            <h2 class="alert-heading mb-0">{{header}}</h2>
+            <p class="mb-2">{{description}}</p>
+            {{#each buttons}}
+            <div class= "btn-dropend flex-column mb-1">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false" >
+                        {{text}}
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">{{link}}</a></li>
+                    </ul>
+            </div>
+            {{/each}}
+        </div>
+    {{/with}}
+    <hr/>  
+</section>
+<section>
+    {{#with service}}
+        <div class="alert alert-success text-center" role="alert">
+            <h2 class="alert-heading mb-0">{{title}}</h2>
+            <p class=" text mb-2">{{description}}</p>
+            {{#each buttons}}
+            <div class= "btn-dropend">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false" >
+                        {{text}}
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">{{link}}</a></li>
+                    </ul>
+            </div>
+            {{/each}}
+        </div>
+    {{/with}}
+    <hr/>  
+</section>
+<section class="mb-5">
+    {{#each footer }}
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#">{{text}}</a>
+            </li>
+        </ul>
+    {{/each}}
+</section>
