@@ -1,0 +1,247 @@
+<section class="row row-cols-12 g-1">
+        {{#with navigation}}
+         <div class=" btn-group dropend nav" role="group">
+            {{#each links}} 
+            <li>
+            <button type="button" class="btn btn-link" data-bs-toggle="dropdown" aria-expanded="false" >
+                {{text}}
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">{{href}}</a></li>
+            </ul>
+            </li>
+            {{/each}}
+            {{#with button}}
+            <li>
+            <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false" >
+                {{text}}   
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">{{href}}</a></li>
+            </ul> 
+            {{/with}} 
+            </li>
+         </div>
+        {{/with}}
+        <hr/>
+        <div>
+            {{#with header}}
+            <h1 class="title">{{title}}</h1>
+            <p class="text start">{{description}}</p>
+            {{#with button}}
+            <div class="btn- dropend">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false" >
+                        {{text}}
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">{{link}}</a></li>
+                    </ul>
+            </div>
+            {{/with}}
+            {{/with}}
+        </div>
+        <hr/>
+
+        <div>
+            {{#with city}}
+            <h2 class="title">{{title}}</h2>              
+            <div class=" container row row-cols-4 row-cols-md-2 g-4">
+             {{#each cards}}
+                    <div class="col">
+                        <div class="card ">     
+                            {{#with picture }}
+                            <img src="{{src}}" class="card-img-top" alt="{{alt}}">
+                            {{/with}}
+                            <div class="card-body">
+                                <h5 class="card-title">{{title}}</h5>
+                                <p class="card-text">{{description}}</p>
+                                {{#with button}}
+                                <div class="btn-dropend">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false" >
+                                        {{text}}
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">{{href}}</a></li>
+                                    </ul>
+                                </div>
+                                {{/with}}
+                            </div>
+                        </div>
+                    </div>
+             {{/each}}       
+            </div>              
+            {{/with}}
+        </div>
+        <hr/>
+        <div>
+            {{#with winner}}
+               <h2 class="title">{{title}}</h2> 
+               <table class="table">
+                {{#with table}}
+                 <thead>
+                       <tr>
+                         <th scope="col">{{head}}</th>
+                       </tr>
+                 </thead>
+                 <tbody>
+                        {{#each user}}
+                        <tr>
+                            <th scope="row">{{place}}</th>
+                            <td>{{name}}</td>
+                            <td>{{surname}}</td>
+                            <td>{{nickname}}</td>
+                        </tr>
+                        {{/each}}
+                 </tbody>
+                {{/with}}                
+               </table>            
+            {{/with}}
+      </div>
+      <div>
+        {{#with gallery}}
+            <h2 class="title">{{title}}</h2>
+            <div class=" container row row-cols-4 row-cols-md-3 g-3">
+              {{#each cards}}
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6 class="card-title">{{name}}</h6>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">{{items}}</li>
+                                <li class="list-group-item">{{items}}</li>
+                                <li class="list-group-item">{{items}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>              
+            {{/each}}
+            </div>  
+        {{/with}} 
+      </div>
+      <hr/>
+      <div>
+        {{#with relaxion}}
+            <h3 class="display-3">{{title}}</h3>
+            <div class=" container row row-cols-4 row-cols-md-2 g-4">
+                 {{#each cards}}
+                    <div class="col">
+                        <div class="card text-bg-secondary mb-3">
+                            <div class="card-header">
+                                <h6 class="card-title">{{header}}</h6>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-secondary-title">{{title}}</h6>
+                                <p class="card-text">{{description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                 {{/each}}
+            </div>
+        {{/with}}
+      </div>
+      <hr/>
+      <div>
+        {{#with rest}}
+        <div class=" container row row-cols-4 row-cols-md-2 g-4">
+             {{#each cards}}
+                <div class="col">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h6 class="card-title">{{header}}</h6>
+                        </div>
+                        <div class="card-body">
+                             <h6 class="card-center-title">{{title}}</h6>
+                             <p class="card-text text-center">{{description}}</p>
+                             <button type="button" class="btn btn-primary">{{button}}</button>
+                        </div>
+                        <div class="card-footer">
+                            <p class="card-footer">{{footer}}</p>
+                        </div>
+                    </div>
+                </div>
+             {{/each}}
+        </div>        
+        {{/with}}
+      </div>
+      <hr/>
+      <div>
+         {{#with proposition}}
+            <h2 class="display-2">{{title}}</h2>
+            <div class=" container row row-cols-4 row-cols-md-2 g-4">
+                 {{#each card}}
+                    <div class="col">
+                        <div class="card text-bg-warning mb-3">
+                            <div class="card-header">
+                                <h6 class="card-title">{{header}}</h6>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">{{title}}</h6>
+                                <p class="card-text">{{description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                 {{/each}}
+            </div>
+        {{/with}}
+      </div>
+      <hr/>
+      <div>
+            {{#with footer}}
+                <h5 class="title">{{title}}</h5>
+                <div class="container w-auto p-3  dropdown row  row-cols-4">
+                    <ul>
+                    {{#each navigation}}
+                       <ul>
+                            <button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{text}}
+                            </button>
+                       </ul>
+                       <br>
+                       <br>
+                        <ul class="dropdown-menu">
+                            <li><a class="link-underline-primary" href="#">{{href}}</a></li>  
+                        </ul>
+                    {{/each}}
+                    </ul>
+                    <br>
+                    <br>
+                    <br>
+                    <ul>
+                    {{#each socialMedia}}
+                      <ul>
+                            <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{name}}
+                            </button>
+                       </ul>
+                       <br>
+                       <br>
+                        <ul class="dropdown-menu">
+                            <li><a class="link-underline-outline-dark" href="#">{{link}}</a></li>  
+                        </ul>
+                    {{/each}}
+                    </ul>
+                    <br>
+                    <br>
+                    <br>
+                    <ul>
+                    {{#each partners}}
+                      <ul>
+                            <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{name}}
+                            </button>
+                       </ul>
+                       <br>
+                       <br>
+                        <ul class="dropdown-menu">
+                            <li><a class="link-underline-outline-info" href="#">{{link}}</a></li>  
+                        </ul>
+                    {{/each}}
+                    </ul>
+
+                </div>
+            {{/with}}
+      </div>
+</section>
+    
