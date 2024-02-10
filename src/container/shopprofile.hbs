@@ -1,0 +1,165 @@
+<div>
+    <ul class="nav">
+         <li class="nav-item">
+            <a class="nav-link" href="'https://github.com/">Home</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="https://www.google.com/">Contacts</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Help</a>
+        </li>
+    </ul>
+    <hr/>
+</div>
+<div>
+    {{#with header}}
+    <h1 class="title mb-2">{{header}}</h1>
+    {{/with}}
+    {{#with purchase}}
+    <ul class="nav nav-tabs">
+         <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">{{tabs}}</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">{{tabs}}</a>
+         </li>
+    </ul>
+    <hr/>
+    {{#with actionBlock}}
+    <form class="row g-3">
+        {{#with input}}
+         <div class="col-auto">
+            <input type="search" class="form-control" id="iputSearch" placeholder="{{placeholder}}">
+         </div>
+        {{/with}}
+        <div class="col-auto">
+            <button type="submit" class="btn btn-success mb-3">Знайти</button>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-outline-success mb-3">Виділити все</button>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-danger mb-3">Очистити все</button>
+        </div>
+    </form>   
+    {{/with}}
+    <hr/>
+    {{> purchaseItem}}
+    {{/with}}    
+</div>
+<div>
+    {{#with userInfo}}
+    <h2 class="title mb-2">{{title}}</h2>
+    {{#with profileData}}
+    <div class="card mb-2">
+         <h3 class="title mb-2">{{title}}</h3>
+         <div class="card mb-2">
+            {{#with fullName}}
+            <div class="table-responsive">
+                <table class="table table-borderless table align-middle">
+                    <tbody>
+                        <tr>
+                            {{#with surname}}
+                            <td><p>{{title}}</p><b>{{value}}</b></td>
+                            {{/with}}
+                            {{#with name}}
+                            <td><p>{{title}}</p><b>{{value}}</b></td>
+                            {{/with}}
+                            {{#with middleName}}
+                            <td><p>{{title}}</p><b>{{value}}</b></td>
+                            {{/with}}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>           
+            {{/with}}
+        </div>
+        <div class="card mb-2">
+            {{#with otherInfo}}
+            <div class="table-responsive">
+                <table class="table table-borderless table align-middle">
+                    <tbody>
+                        <tr>
+                            {{#with birthday}}
+                            <td><p>{{title}}</p><b>{{value}}</b></td>
+                            {{/with}}
+                            {{#with sex}}
+                            <td><p>{{title}}</p><b>{{value}}</b></td>
+                            {{/with}}
+                            {{#with language}}
+                            <td><p>{{title}}</p><b>{{value}}</b></td>
+                            {{/with}}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>           
+            {{/with}}
+        </div>
+        {{/with}}
+         <div class="card mb-2">
+            <div class="table-responsive">
+                <table class="table table-borderless table align-middle">
+                    <tbody>
+                        <tr>
+                            <td><button type="submit" class="btn btn-primary mb-3">Редагувати</button></td>
+                            <td><button type="submit" class="btn btn-secondary mb-3">Oчистити</button></td>                        
+                            <td><button type="submit" class="btn btn-danger mb-3">Видалити</button></td>                         
+                        </tr>
+                    </tbody>
+                </table>
+            </div>           
+        </div>
+    </div> 
+    {{#with recipients}}
+    <div class="card mb-2">
+         <h3 class="title mb-2">{{title}}</h3>
+         <div class="card mb-2">
+            {{#each users}}
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">                        
+                        <ul>
+                            <b>{{name}}</b>
+                            <p>{{phone}}</p>
+                            <td><button type="submit" class="btn btn-primary mb-3">Редагувати</button></td>
+                        </ul>
+                    </div>
+                </div>    
+            </div>           
+            {{/each}}
+        </div>     
+    </div> 
+    {{/with}}
+    {{#with contacts}}
+    <div class="card mb-2">
+         <h3 class="title mb-2">{{title}}</h3>
+         <div class="card mb-2">
+            {{#each contactData}}
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">                        
+                        <ul>
+                            <b>{{title}}</b>
+                            <p>{{value}}</p>
+                            <td><button type="submit" class="btn btn-primary mb-3">Редагувати</button></td>
+                        </ul>
+                    </div>
+                </div>    
+            </div>           
+            {{/each}}
+        </div>     
+    </div> 
+    {{/with}}
+    {{/with}}
+    <hr/>
+</div>
+<div>
+    {{#each footer }}
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="{{link}}">{{text}}</a>
+            </li>
+        </ul>
+    {{/each}}
+</div>
