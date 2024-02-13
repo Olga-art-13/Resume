@@ -177,25 +177,13 @@
             </div>
     </section>
     <hr/>
-    <section class="col-12 g-3">
-        <nav class="nav flex-column">
-        <a class="nav-link active" aria-current="page" href="https://www.youtube.com/">Home</a>
-        <a class="nav-link" href="https://www.youtube.com/feed/trending">Trending</a>
-        <a class="nav-link" href="https://www.youtube.com/feed/subscriptions">Subscriptions</a>
-        <a class="nav-link disabled" aria-disabled="true">Library</a>
-        </nav>
-        <nav class="nav flex-column">
-        <a class="nav-link active" aria-current="page" href="https://www.youtube.com/feed/history">History</a>
-        <a class="nav-link" href="https://www.youtube.com/feed/my_videos">Your Videos</a>
-        <a class="nav-link" href="https://www.youtube.com/live">Live</a>
-        <a class="nav-link disabled" aria-disabled="true">Settings</a>
-        </nav>
-        {{#each footer }}
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link" href="{{link}}">{{text}}</a>
-            </li>
-        </ul>
+    <section class=" nav g-3">
+        {{#each footer}}
+        <div class="nav item col=2">
+            {{#each footer}}
+                <a class="nav-link {{#if @last}}disabled{{/if}}" href="{{link}}">{{text}}</a>
+            {{/each}}
+        </div>
       {{/each}}
     </section>
 
