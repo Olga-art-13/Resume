@@ -1,0 +1,189 @@
+<diw class="row">
+    <div>
+        <ul class="nav">
+         <li class="nav-item">
+            <a class="nav-link" href="'https://github.com/">Home</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="https://www.google.com/">Contacts</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Help</a>
+        </li>
+        </ul>
+        <hr/>
+    </div>
+    <section class="col-8">
+         {{#with formBlock}}
+            <h2 class="title mb-2">{{header}}</h2>
+         {{#with rating}}
+         <p>{{title}} {{value}}</p>
+         {{/with}}
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Про товар</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Характеристики</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Відгуки</a>
+            </li>
+          </ul>
+         <hr/>
+         {{#with actionBlock}}
+           <div class="row col-8 card">
+            <div class="card-body">
+                {{#with report}}
+                   <b>{{title}}</b>
+                   <a href="https://www.youtube.com/" class="btn btn-secondary mb-1 md-4">Написати відгук</a>
+                {{/with}}
+            </div>
+           </div>
+         {{/with}}
+         <hr/>
+    </section>
+    
+    <section class="col-4">
+             {{#with goodsInfo}}
+            <div class="card mb-2">
+                <div class="card-body">
+                    <img src="{{photo}}" class="border rounded" alt="...">
+                    <p>{{name}}</p>
+                </div>
+            </div>
+             <div class="card mb-2">
+                <div class="card-body">
+                    <b>{{price}}</b><br>
+                    <p>Є в наявності</p>
+                    <a href="https://www.youtube.com/" class="btn btn-primary mb-1 md-4">Купити</a>
+                    <a href="https://www.youtube.com/" class="btn btn-secondary mb-1 md-4">Купити в кредит</a>
+                </div>
+             </div>
+             <div class="card mb-2">
+                 <div class="card-body">
+                    {{#with seller}}
+                     <b>{{title}}</b>
+                     <p>{{value}}</p>
+                    {{/with}}
+                 </div>
+             </div>
+            {{/with}}
+    </section>
+
+    <section class="col=12">
+         {{#with feedbackBlock}}
+         <h2 class="title mb-2">{{title}}</h2>
+         <a href="https://www.youtube.com/" class="btn btn-warning mb-1 md-4">Додати відгук</a>
+         <a href="https://www.youtube.com/" class="btn btn-success mb-1 md-4">Позитивні відгуки</a>
+         <a href="https://www.youtube.com/" class="btn btn-danger mb-1 md-4">Негативні відгуки</a>
+         {{/with}}
+         {{/with}}
+         <hr/>
+         <div class="card">
+          <div class="card mb-2">
+            <div class="card-header">
+               <h6>Іван Іванов</h6>
+               <p>Відгук покупця</p>
+               <p>1 січня 2023</p>  
+            </div>
+            <div class="card-body">           
+               <div class="card-text">
+                 <p>Продавець Machinery</p>
+                 <p>Оцінка 5/5</p>
+                 <p>Цей ноутбук має гарний дизайн та добре виконує свої основні функції. Швидкість роботи та продуктивність в цілому є на задовільному рівні. Крім того, присутній достатній обсяг пам'яті та потужність акумулятора.</p>
+                 <p>Однак, можливі проблеми з перегрівом під час тривалого використання, та може бути недостатньої ємності жорсткого диска для потреб користувача. Крім того, ціна може бути дещо високою порівняно з аналогічними моделями.</p>
+                 <b>Переваги</b>
+                 <p>Обсяг пам’яті, акумулятор</p>
+                 <b>Недоліки</b>
+                 <p>Перегрів, ємкість жосткого диску</p>
+                 <img src="https://picsum.photos/110/100" class="border rounded " alt="...">
+                 <img src="https://picsum.photos/110/100" class="border rounded " alt="...">
+                 <img src="https://picsum.photos/110/100" class="border rounded " alt="...">
+                </div>
+            </div>
+         </div>
+         <div class="card mb-2">
+            <div class="card-body">
+                 <div class="card-text">
+                    <p>Користувач</p>
+                    <date>1 січня 2023</date>
+                    <p>Дякую за відгук, я подумаю про недоліки, про які ви згадували, перш ніж зробити покупку.</p>
+                 </div>   
+            </div>
+          </div>
+            <div class="card mb-2">
+            <div class="card-body">
+                 <div class="card-text">
+                    <p>Користувач</p>
+                    <date>3 січня 2023</date>
+                    <p>Дякую за корисний відгук! Це допомогло мені зробити вибір щодо покупки ноутбука.</p>
+                 </div>   
+            </div>
+         </div>
+         <div class="card mb-2">
+         <div class="card-body">
+                 <div class="card-text">
+                    <p>Користувач</p>
+                    <date>10 січня 2023</date>
+                    <p>Дякую за відгук, але я хотів би дізнатися більше деталей про проблеми з перегрівом, щоб зробити зважений вибір перед покупкою.</p>
+                 </div>   
+            </div> 
+         </div>       
+         </section>
+         <section class="col-12">
+            <div class="card">
+               <div class="card mb-2">
+                 <div class="card-header">
+                    <h6>Іван Іванов</h6>
+                    <p>Відгук покупця</p>
+                    <p>1 січня 2023</p>  
+                 </div>
+                 <div class="card-body">
+                    <div class="card-text">
+                    <p>Продавець chinery</p>
+                    <p>Оцінка 5/5</p>
+                    <p>Цей ноутбук має гарний дизайн та добре виконує свої основні функції. Швидкість роботи та продуктивність в цілому є на задовільному рівні. Крім того, присутній достатній обсяг пам'яті та потужність акумулятора.</p>
+                    <b>Переваги</b>
+                    <p>Обсяг пам’яті, акумулятор</p>
+                    <b>Недоліки</b>
+                    <p>Не виявлено</p>
+                    <img src="https://picsum.photos/110/100" class="border rounded " alt="..."> 
+                    </div>
+                 </div>
+               </div>
+                <div class="card mb-2">
+                    <div class="card-body">
+                    <div class="card-text">
+                    <p>Користувач</p>
+                    <date>1 січня 2023</date>
+                    <p>Дякую за відгук, я подумаю про недоліки, про які ви згадували, перш ніж зробити покупку.</p>
+                    </div>   
+                    </div>
+                 </div> 
+            </div>
+    </section>
+    <section class="col-12">
+            <div class="card text-bg-success">
+               {{#with service}}
+                 <div class="card-body text-center">
+                    <h3 class="card-title">{{title}}</h3>
+                    <p>{{description}}</p>
+                    {{#each buttons}}
+                     <a href="https://www.youtube.com/" class="btn btn-primary mb-1 md-4">{{text}}</a>
+                    {{/each}}
+                 </div>
+               {{/with}}
+            </div>
+    </section>
+    <hr/>
+    <section class="nav g-3">
+        {{#each footer}}
+            <div class="nav item col=2">
+                {{#each this}}
+                    <a class="nav-link {{#if @last}}disabled{{/if}}" href="{{link}}">{{text}}</a>
+                {{/each}}
+            </div>
+        {{/each}}
+    </section>
+</diw>
