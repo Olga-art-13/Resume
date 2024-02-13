@@ -1,0 +1,48 @@
+<div class="card">
+    {{#each reviewList}}
+    <ul>
+    <div class="card mb-2">
+       <div class="card-header">
+            {{#with title}}
+            <p>{{username}}</p>
+            <p>{{caption}}</p>
+            <date>{{date}}</date>          
+            {{/with}}
+       </div>
+        {{#with reviewBody}}
+        <div class="card-body">
+          {{#with seller}}
+           <p>{{title}}</p>
+           <p>{{value}}</p>
+          {{/with}}
+          {{#with seller}}
+          <p>{{title}}</p>
+          <p>{{value}}</p>
+          {{/with}}
+          <p>{{text}}</p>
+          {{#with advantages}}
+          <p>{{title}}</p>
+          <p>{{value}}</p>
+          {{/with}}
+          {{#with disadvantages}}
+          <p>{{title}}</p>
+          <p>{{value}}</p>
+          {{/with}}
+          <img src="https://picsum.photos/110/100" class="border rounded " alt="...">
+          </div>
+           <div class="card mb-2">
+            <div class="card-body">
+               {{#each coments}}
+                 <ul>
+                    <p>{{userName}}</p>
+                    <p>{{date}}</p>
+                    <p>{{text}}</p>
+                 </ul>
+               {{/each}} 
+            </div>
+           </div>
+        {{/with}}       
+    </div>
+    </ul>   
+    {{/each}}
+</div>
