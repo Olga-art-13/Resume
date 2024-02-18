@@ -1,0 +1,22 @@
+<diw class="row">
+  <section class="col-12">
+    <h4 class="title ms-3 mt-5">{{name}}</h4>
+    <h4 class=" title text-end mb-5">{{category}}</h4>
+  </section>
+  <section class="col-10">
+     {{#each projects}}
+      <ol>
+        <li><b><u>{{title}}</u></b></li>
+        <li>{{description}}</li>
+      </ol>  
+     {{/each}}
+  </section>
+  <section class="col-12 ms-3">
+  <p>{{description}}</p>
+  </section>
+  <section class="col-10 ms-3">
+    {{#each buttons}}
+         <a href="{{href}}" class="btn btn-primary btn-sm mt-2 mb-3">{{text}}</a>    
+    {{/each}}
+  </section>
+</diw>
