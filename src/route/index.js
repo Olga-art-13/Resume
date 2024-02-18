@@ -3459,5 +3459,226 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
+router.get('/index8', function (reg, res) {
+
+  res.render('index8', {
+    layout: 'index',
+
+    page: {
+      title: 'Index/Project',
+    }, 
+
+    name:'Olha Bezkorovaina',
+    category: 'Resume project',
+
+  
+    projects: [
+      {
+        title: 'Work',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Bio',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Education',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Skills',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Summary',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Person',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Facebook',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Web',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Program',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'JS',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Car',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Mac',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Bio',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Task21',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Task22',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Task31',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Shopreview',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Shopprofile',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Shoporder',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Shophome',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Shopcatalog',
+        description:
+          'This is page for Project',
+      },
+      {
+        title: 'Shopcart',
+        description:
+          'This is page for Project',
+      },
+
+      ],
+
+      description:' This is testing text of this is page for Project',
+
+      buttons:[
+        {
+          text: 'Work',
+          href: 'http://localhost:3000/work',
+        },
+        {
+          text: 'Bio',
+          href: 'http://localhost:3000/bio',
+        },
+        {
+          text: 'Education',
+          href: 'http://localhost:3000/education',
+        },
+        {
+          text: 'Summary',
+          href: 'http://localhost:3000/summary',
+        },
+        {
+          text: 'Skills',
+          href: 'http://localhost:3000/skills',
+        },
+        {
+          text: 'Person',
+          href: 'http://localhost:3000/person',
+        },
+        {
+          text: 'Facebook',
+          href: 'http://localhost:3000/facebook',
+        },
+        {
+          text: 'Web',
+          href: 'http://localhost:3000/web',
+        },
+        {
+          text: 'JS',
+          href: 'http://localhost:3000/js',
+        },
+        {
+          text: 'Program',
+          href: 'http://localhost:3000/program',
+        },
+        {
+          text: 'Car',
+          href: 'http://localhost:3000/car',
+        },
+        {
+          text: 'Mac',
+          href: 'http://localhost:3000/mac',
+        },
+        {
+          text: 'Task21',
+          href: 'http://localhost:3000/task21',
+        },
+        {
+          text: 'Task22',
+          href: 'http://localhost:3000/task22',
+        },
+        {
+          text: 'Task31',
+          href: 'http://localhost:3000/task31',
+        },
+        {
+          text: 'Shopreview',
+          href: 'http://localhost:3000/shopreview',
+        },
+        {
+          text: 'Shopprofile',
+          href: 'http://localhost:3000/shopprofile',
+        },
+        {
+          text: 'Shoporder',
+          href: 'http://localhost:3000/shoporder',
+        },
+        {
+          text: 'Shophome',
+          href: 'http://localhost:3000/shophome',
+        },
+        {
+          text: 'Shopcatalog',
+          href: 'http://localhost:3000/shopcatalog',
+        },
+        {
+          text: 'Shopcart',
+          href: 'http://localhost:3000/shopcart',
+        },
+
+    ],
+  
+  })
+
+})
+
 // Підключаємо роутер до бек-енду
 module.exports = router
