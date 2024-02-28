@@ -5,17 +5,6 @@ const router = express.Router()
 
 // ================================================================
 
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
-})
-// ================================================================
 
 var header= {
 
@@ -3459,13 +3448,13 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
-router.get('/index8', function (reg, res) {
+router.get('/', function (reg, res) {
 
   res.render('index8', {
     layout: 'index',
 
     page: {
-      title: 'Index/Project',
+      title: 'Project',
     }, 
 
     name:'Olha Bezkorovaina',
@@ -3591,94 +3580,94 @@ router.get('/index8', function (reg, res) {
       buttons:[
         {
           text: 'Work',
-          href: 'http://localhost:3000/work',
+          href: 'http:/work',
         },
         {
           text: 'Bio',
-          href: 'http://localhost:3000/bio',
+          href: 'http:/bio',
         },
         {
           text: 'Education',
-          href: 'http://localhost:3000/education',
+          href: 'http:/education',
         },
         {
           text: 'Summary',
-          href: 'http://localhost:3000/summary',
+          href: 'http:/summary',
         },
         {
           text: 'Skills',
-          href: 'http://localhost:3000/skills',
+          href: 'http:/skills',
         },
         {
           text: 'Person',
-          href: 'http://localhost:3000/person',
+          href: 'http:/person',
         },
         {
           text: 'Facebook',
-          href: 'http://localhost:3000/facebook',
+          href: 'http:/facebook',
         },
         {
           text: 'Web',
-          href: 'http://localhost:3000/web',
+          href: 'http:/web',
         },
         {
           text: 'JS',
-          href: 'http://localhost:3000/js',
+          href: 'http:/js',
         },
         {
           text: 'Program',
-          href: 'http://localhost:3000/program',
+          href: 'http:/program',
         },
         {
           text: 'Car',
-          href: 'http://localhost:3000/car',
+          href: 'http:/car',
         },
         {
           text: 'Mac',
-          href: 'http://localhost:3000/mac',
+          href: 'http:/mac',
         },
         {
           text: 'Task21',
-          href: 'http://localhost:3000/task21',
+          href: 'http:/task21',
         },
         {
           text: 'Task22',
-          href: 'http://localhost:3000/task22',
+          href: 'http:/task22',
         },
         {
           text: 'Task31',
-          href: 'http://localhost:3000/task31',
+          href: 'http:/task31',
         },
         {
           text: 'Shopreview',
-          href: 'http://localhost:3000/shopreview',
+          href: 'http:/shopreview',
         },
         {
           text: 'Shopprofile',
-          href: 'http://localhost:3000/shopprofile',
+          href: 'http:/shopprofile',
         },
         {
           text: 'Shoporder',
-          href: 'http://localhost:3000/shoporder',
+          href: 'http:/shoporder',
         },
         {
           text: 'Shophome',
-          href: 'http://localhost:3000/shophome',
+          href: 'http:/shophome',
         },
         {
           text: 'Shopcatalog',
-          href: 'http://localhost:3000/shopcatalog',
+          href: 'http:/shopcatalog',
         },
         {
           text: 'Shopcart',
-          href: 'http://localhost:3000/shopcart',
+          href: 'http:/shopcart',
         },
 
     ],
   
   })
-
 })
+
 
 // Підключаємо роутер до бек-енду
 module.exports = router
